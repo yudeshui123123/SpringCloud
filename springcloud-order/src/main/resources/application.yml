@@ -1,0 +1,19 @@
+###订单服务的端口号
+server:
+  port: 8001
+###服务名称(服务注册到eureka名称)相当于起别名 serviceID 唯一的 rpc远程通讯需要通过这个来调用这个服务的接口
+spring:
+  application:
+    name: springcloud-order
+###服务注册到eureka地址
+eureka:
+  client:
+    service-url:
+      ##将点前的服务注册到哪里去
+      defaultZone: http://localhost:8100/eureka
+
+
+    ###将服务注册到eureka上面
+    register-with-eureka: true
+    ###是否需要从eureka上获取注册信息
+    fetch-registry: true
